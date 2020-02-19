@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookmarker</title>
+    <link rel="icon" href="bookmark.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <p class="pTitle"><span><img src="bookmark.ico" class="imgLogo" alt="site_logo"></span>Bookmarker</p>
+        </div>
+        <div class="divider"></div>
+        <div class="divInput">
+            <form method="POST" target="#" id="formInput">
+                <p class="pLabel">Site Name</p>
+                <input type="text" class="pInput" id="pSiteName" maxlength="15" required/>
+                <p class="pLabel">Site URL</p>
+                <input type="url" class="pInput" id="pSiteUrl" required/>
+                <input type="submit" class="pButton" value="SAVE" id="btnSave" />
+                <input type="submit" class="pButton" value="EDIT" id="btnEdit" style="display: none;" />
+            </form>
+            <button class="pButton" id="btnCancel" style="display: none;" onclick="performCancel()">CANCEL</button>
+            <div class="divider"></div>
+            <div class="divLists">
+                <div id="divListBookmarks">
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="editId" value="" />
+    </div>
+    <div class="footer">
+        <p class="pFooter">2020 #TrustTheProcess</p>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
